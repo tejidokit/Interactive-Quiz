@@ -1,6 +1,7 @@
 
 const correctAnswers = ['B', 'B', 'B', 'B'];
 const form = document.querySelector('.quiz-form');
+const result = document.querySelector('.result');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -16,5 +17,14 @@ form.addEventListener('submit', (event) => {
         }
     });
 
-    console.log(score);
+    // ### Showing the score on the page ###
+    result.querySelector('span').textContent = `${score}%`; //look for span in results, then change the text content using a template string to output a variable inside ${score}
+
+    //remove the default display none bootstrap/css propery fromt the html page
+    result.classList.remove('d-none');
+
 });
+
+
+
+
