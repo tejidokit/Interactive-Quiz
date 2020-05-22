@@ -25,6 +25,10 @@ form.addEventListener('submit', (event) => {
 
 });
 
+//### Window Object (global object) ###
+
+console.log('hello');
+
 
 
 
